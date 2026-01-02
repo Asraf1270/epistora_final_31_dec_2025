@@ -1,0 +1,10 @@
+{
+    "1": {
+        "username": "asraf1270",
+        "email": "mdasrafulislam1270@gmail.com",
+        "password_hash": "$argon2id$v=19$m=65536,t=4,p=1$anJBdG1UcThuOUQ1b3puSw$rUqAgCZtTVffQmLMAxTKsy6DCF5vnsXsxU8DmBqQTUE",
+        "role": 99,
+        "created_at": 1766645818,
+        "verified": false
+    }
+}

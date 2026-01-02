@@ -1,0 +1,15 @@
+{
+    "preferences": {
+        "theme_data": {
+            "--bg": "#ffffff",
+            "--text": "#000000",
+            "--accent": "#5d8ffc",
+            "--card-bg": "#f8f9fc",
+            "--border": "#e0e6ed"
+        },
+        "privacy": "public"
+    },
+    "notifications": [],
+    "follows": [],
+    "bookmarks": []
+}

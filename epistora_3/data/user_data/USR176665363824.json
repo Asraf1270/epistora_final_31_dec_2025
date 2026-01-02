@@ -1,0 +1,28 @@
+{
+    "theme": [],
+    "username": "Md. Asraful Islam",
+    "email": "mdasrafulislam1270@gmail.com",
+    "password": "$2y$10$REv5Czt7J1s9AxaZjSYi5O1pJ6onoHzFMBOzIGNkU3ATuQI2uE2E.",
+    "role": "v_writer",
+    "follows": [],
+    "bookmarks": [],
+    "history": [
+        {
+            "post_id": "POST1766655835965",
+            "title": "this is my first blog",
+            "time": 1766663597
+        },
+        {
+            "post_id": "POST1766655835965",
+            "title": "this is my first blog",
+            "time": 1766663949
+        },
+        {
+            "post_id": "POST1766656136649",
+            "title": "2nd post",
+            "time": 1766663969
+        }
+    ],
+    "notifications": [],
+    "privacy": []
+}

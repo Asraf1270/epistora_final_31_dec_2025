@@ -1,0 +1,20 @@
+{
+    "USR176665363824": {
+        "username": "Md. Asraful Islam",
+        "email": "mdasrafulislam1270@gmail.com",
+        "password": "$2y$10$REv5Czt7J1s9AxaZjSYi5O1pJ6onoHzFMBOzIGNkU3ATuQI2uE2E.",
+        "role": "v_writer",
+        "verified": false,
+        "created": 1766653638,
+        "status": "active"
+    },
+    "USR176666704220": {
+        "username": "Md. Asraful Islam",
+        "email": "asraf@gmail.com",
+        "password": "$2y$10$OYUob.aAxvAtEAPu6jaOlevjF2QsLMQjK8CaNAEeDWQup.PH.xAxi",
+        "role": "admin",
+        "verified": false,
+        "created": 1766667042,
+        "status": "active"
+    }
+}

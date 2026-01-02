@@ -1,0 +1,21 @@
+{
+    "app_id": "app_694e507e8c93c",
+    "user_id": "U-a7e0fd1f-1766728877",
+    "status": "pending",
+    "timestamp": 1766740094,
+    "date_human": "2025-12-26 09:08",
+    "biodata": {
+        "full_name": "Md. Asraful Islam",
+        "father_name": "Mahabubol Alam",
+        "email": "asraf@gmail.com",
+        "phone": "+8801987971270",
+        "dob": "2006-01-26",
+        "address": "narayanhat, fatickchari"
+    },
+    "portfolio": {
+        "sample": "Build the Content Submission system for Epistora.\r\n\r\nCreate \/post\/create\/index.php.\r\n\r\nLogic: When a post is submitted, generate a post_id as [UniqueString][Year][Month][WriterID].\r\n\r\nPermissions: If the user is a v_writer or admin, set status to 'published'. Immediately add the metadata (title, preview, author) to \/data\/posts.json and create the full content file in \/data\/post_content\/[post_id].json.\r\n\r\nIf the user is a standard writer, set status to 'pending' and only create the file in \/data\/post_content\/.\r\n\r\nCreate \/admin\/pending\/index.php for admins to review and move 'pending' metadata into the global posts.json index.\r\n",
+        "bookmarks": [
+            "http:\/\/localhost\/epistora\/post\/view\/?id=044CFF-202512-U-b4d034d0-1766729322"
+        ]
+    }
+}

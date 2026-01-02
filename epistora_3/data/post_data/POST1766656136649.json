@@ -1,0 +1,38 @@
+{
+    "meta": {
+        "post_id": "POST1766656136649",
+        "author_id": "USR176665363824",
+        "tags": [
+            "chatgpt"
+        ],
+        "read_time": 1
+    },
+    "body": "<?php\r\nsession_start();\r\n\r\n\/\/ 1. Security Check\r\nif (!isset($_SESSION['user_id']) || $_SESSION['profile']['role'] !== 'admin') {\r\n    die(\"Access Denied.\");\r\n}\r\n\r\n$postsIndexFile = '..\/data\/posts.json';\r\n$postDataDir = '..\/data\/post_data\/';\r\n\r\n\/\/ 2. Handle Approval Action\r\nif (isset($_POST['approve_id'])) {\r\n    $approve_id = $_POST['approve_id'];\r\n\r\n    \/\/ Update individual file\r\n    $fullPath = $postDataDir . $approve_id . \".json\";\r\n    if (file_exists($fullPath)) {\r\n        $data = json_decode(file_get_contents($fullPath), true);\r\n        $data['status'] = 'approved';\r\n        file_put_contents($fullPath, json_encode($data, JSON_PRETTY_PRINT));\r\n    }\r\n\r\n    \/\/ Update central index\r\n    $index = json_decode(file_get_contents($postsIndexFile), true);\r\n    if (isset($index[$approve_id])) {\r\n        $index[$approve_id]['status'] = 'approved';\r\n        file_put_contents($postsIndexFile, json_encode($index, JSON_PRETTY_PRINT));\r\n    }\r\n    $msg = \"Post approved successfully!\";\r\n}\r\n\r\n\/\/ 3. Get all Pending Data\r\n$pendingList = [];\r\n$files = glob($postDataDir . \"*.json\");\r\nforeach ($files as $file) {\r\n    $content = json_decode(file_get_contents($file), true);\r\n    if ($content['status'] === 'pending') {\r\n        $id = $content['meta']['post_id'];\r\n        \/\/ Cross-reference with index to get the title\r\n        $index = json_decode(file_get_contents($postsIndexFile), true);\r\n        $content['title'] = $index[$id]['title'] ?? 'Untitled';\r\n        $pendingList[] = $content;\r\n    }\r\n}\r\n?>\r\n\r\n<!DOCTYPE html>\r\n<html>\r\n<head>\r\n    <title>Admin - Review Posts<\/title>\r\n    <style>\r\n        body { font-family: sans-serif; background: #f8f9fa; padding: 30px; }\r\n        .post-card { background: white; border: 1px solid #ddd; padding: 20px; margin-bottom: 20px; border-radius: 8px; }\r\n        .post-content-preview { \r\n            background: #fffbe6; border-left: 5px solid #ffe58f; \r\n            padding: 15px; margin: 15px 0; display: none; \/* Hidden by default *\/\r\n        }\r\n        .btn { padding: 8px 16px; cursor: pointer; border: none; border-radius: 4px; margin-right: 5px; }\r\n        .btn-read { background: #007bff; color: white; }\r\n        .btn-approve { background: #28a745; color: white; }\r\n        .tag { background: #eee; padding: 2px 8px; border-radius: 10px; font-size: 0.8em; }\r\n    <\/style>\r\n    <script>\r\n        function toggleRead(id) {\r\n            var el = document.getElementById('body-' + id);\r\n            el.style.display = (el.style.display === 'block') ? 'none' : 'block';\r\n        }\r\n    <\/script>\r\n<\/head>\r\n<body>\r\n\r\n    <h2>Pending for Approval (<?php echo count($pendingList); ?>)<\/h2>\r\n    <a href=\"index.php\">Back to Dashboard<\/a>\r\n    <hr>\r\n\r\n    <?php if (isset($msg)) echo \"<p style='color:green'>$msg<\/p>\"; ?>\r\n\r\n    <?php foreach ($pendingList as $post): ?>\r\n        <div class=\"post-card\">\r\n            <h3><?php echo htmlspecialchars($post['title']); ?><\/h3>\r\n            <p>\r\n                <strong>Author:<\/strong> <?php echo $post['meta']['author_id']; ?> | \r\n                <strong>Tags:<\/strong> \r\n                <?php foreach($post['meta']['tags'] as $tag): ?>\r\n                    <span class=\"tag\"><?php echo htmlspecialchars($tag); ?><\/span>\r\n                <?php endforeach; ?>\r\n            <\/p>\r\n\r\n            <div id=\"body-<?php echo $post['meta']['post_id']; ?>\" class=\"post-content-preview\">\r\n                <strong>Full Content:<\/strong><br>\r\n                <?php echo nl2br(htmlspecialchars($post['body'])); ?>\r\n            <\/div>\r\n\r\n            <div style=\"margin-top: 10px;\">\r\n                <button class=\"btn btn-read\" onclick=\"toggleRead('<?php echo $post['meta']['post_id']; ?>')\">Read Content<\/button>\r\n                \r\n                <form method=\"POST\" style=\"display:inline;\">\r\n                    <input type=\"hidden\" name=\"approve_id\" value=\"<?php echo $post['meta']['post_id']; ?>\">\r\n                    <button type=\"submit\" class=\"btn btn-approve\">Approve Post<\/button>\r\n                <\/form>\r\n            <\/div>\r\n        <\/div>\r\n    <?php endforeach; ?>\r\n\r\n    <?php if (empty($pendingList)) echo \"<p>Everything is caught up! No pending posts.<\/p>\"; ?>\r\n\r\n<\/body>\r\n<\/html>",
+    "comments": [
+        {
+            "comment_id": "694d272fdf099",
+            "user_id": "USR176665363824",
+            "username": "Md. Asraful Islam",
+            "text": "hi friends\r\n",
+            "replies": [
+                {
+                    "user_id": "USR176665363824",
+                    "username": "Md. Asraful Islam",
+                    "text": "bol"
+                }
+            ]
+        }
+    ],
+    "history": [
+        {
+            "action": "created",
+            "time": 1766656136
+        }
+    ],
+    "status": "approved",
+    "reactions_list": {
+        "USR176665363824": {
+            "type": "like"
+        }
+    }
+}

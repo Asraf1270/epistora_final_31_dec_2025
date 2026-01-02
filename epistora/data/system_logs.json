@@ -1,0 +1,72 @@
+[
+    {
+        "id": "log_694f75dd4bdb2",
+        "timestamp": 1766815197,
+        "date": "2025-12-27 05:59:57",
+        "admin_id": "U-dbc96da3-1766729347",
+        "admin_name": "Md. Asraful Islam",
+        "action": "REJECT_WRITER",
+        "details": "Rejected application app_694e5021c2dd2.",
+        "ip": "::1"
+    },
+    {
+        "id": "log_694e5672a2c7e",
+        "timestamp": 1766741618,
+        "date": "2025-12-26 09:33:38",
+        "admin_id": "U-dbc96da3-1766729347",
+        "admin_name": "Md. Asraful Islam",
+        "action": "SYSTEM_CONFIG",
+        "details": "Disabled Global Maintenance Mode",
+        "ip": "::1"
+    },
+    {
+        "id": "log_694e566f5cfa9",
+        "timestamp": 1766741615,
+        "date": "2025-12-26 09:33:35",
+        "admin_id": "U-dbc96da3-1766729347",
+        "admin_name": "Md. Asraful Islam",
+        "action": "SYSTEM_CONFIG",
+        "details": "Enabled Global Maintenance Mode",
+        "ip": "::1"
+    },
+    {
+        "id": "log_694e562818b30",
+        "timestamp": 1766741544,
+        "date": "2025-12-26 09:32:24",
+        "admin_id": "U-dbc96da3-1766729347",
+        "admin_name": "Md. Asraful Islam",
+        "action": "SYSTEM_CONFIG",
+        "details": "Enabled Global Maintenance Mode",
+        "ip": "::1"
+    },
+    {
+        "id": "log_694e56258962b",
+        "timestamp": 1766741541,
+        "date": "2025-12-26 09:32:21",
+        "admin_id": "U-dbc96da3-1766729347",
+        "admin_name": "Md. Asraful Islam",
+        "action": "SYSTEM_CONFIG",
+        "details": "Disabled Global Maintenance Mode",
+        "ip": "::1"
+    },
+    {
+        "id": "log_694e561a1a510",
+        "timestamp": 1766741530,
+        "date": "2025-12-26 09:32:10",
+        "admin_id": "U-dbc96da3-1766729347",
+        "admin_name": "Md. Asraful Islam",
+        "action": "SYSTEM_CONFIG",
+        "details": "Enabled Global Maintenance Mode",
+        "ip": "::1"
+    },
+    {
+        "id": "log_694e561500bc2",
+        "timestamp": 1766741525,
+        "date": "2025-12-26 09:32:05",
+        "admin_id": "U-dbc96da3-1766729347",
+        "admin_name": "Md. Asraful Islam",
+        "action": "SYSTEM_CONFIG",
+        "details": "Enabled Global Maintenance Mode",
+        "ip": "::1"
+    }
+]

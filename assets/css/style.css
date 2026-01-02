@@ -1,0 +1,172 @@
+/* Epistora Global Styles - v2.0 */
+/* Light Mode (Default) */
+:root[data-theme="light"] {
+    --bg: #f8fafc;
+    --card-bg: #ffffff;
+    --text-main: #0f172a;
+    --text-muted: #64748b;
+    --border: #e2e8f0;
+    --nav-bg: #ffffff;
+}
+
+/* Dark Mode */
+:root[data-theme="dark"] {
+    --bg: #0f172a;
+    --card-bg: #1e293b;
+    --text-main: #f1f5f9;
+    --text-muted: #94a3b8;
+    --border: #334155;
+    --nav-bg: #0f172a;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text-main);
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.post-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+}
+
+.btn-logout {
+    color: #ef4444 !important;
+    font-weight: bold;
+}
+
+.btn-apply {
+    background: var(--primary);
+    color: white !important;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 0.85rem;
+}
+
+/* --- Layout Containers --- */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* --- Navigation Header --- */
+header {
+    background: var(--white);
+    border-bottom: 1px solid #e2e8f0;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Mobile Hamburger Logic (Pure CSS) */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: var(--dark);
+    border-radius: 3px;
+    transition: var(--transition);
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--slate);
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.nav-links a:hover { color: var(--primary); }
+
+/* --- Search & Ribbon --- */
+.search-wrapper { position: relative; flex: 1; max-width: 400px; margin: 0 2rem; }
+
+.tag-ribbon {
+    background: var(--white);
+    border-bottom: 1px solid #e2e8f0;
+    padding: 0.75rem 0;
+    overflow-x: auto;
+    scrollbar-width: none; /* Hide scrollbar Firefox */
+}
+.tag-ribbon::-webkit-scrollbar { display: none; } /* Hide scrollbar Chrome */
+
+.tag-item {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    background: #eff6ff;
+    color: var(--primary);
+    border-radius: 99px;
+    font-size: 0.85rem;
+    text-decoration: none;
+    margin-right: 0.75rem;
+    font-weight: 600;
+}
+
+/* --- Post Cards --- */
+main.feed {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+
+
+.post-card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    border: 1px solid transparent;
+}
+
+.post-card:hover {
+    transform: translateY(-8px);
+    border-color: #dbeafe;
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+}
+
+.post-card h2 { margin: 0.5rem 0; font-size: 1.4rem; }
+.post-card .meta { font-size: 0.85rem; color: var(--slate); margin-bottom: 1rem; }
+
+/* --- Responsive Breakpoints --- */
+@media (max-width: 768px) {
+    .menu-toggle { display: flex; }
+    
+    .search-wrapper { order: 3; max-width: 100%; margin: 1rem 0 0 0; width: 100%; }
+    
+    .nav-container { flex-wrap: wrap; }
+    
+    .nav-links {
+        display: none; /* Hidden by default on mobile */
+        width: 100%;
+        flex-direction: column;
+        padding-top: 1rem;
+        text-align: center;
+    }
+    
+    .nav-links.active { display: flex; }
+}

@@ -1,0 +1,17 @@
+# Prevent directory listing
+Options -Indexes
+
+# Deny public access to the data folder
+RewriteEngine On
+RewriteRule ^data/.*$ - [F,L]
+
+# Custom Error Documents for standard HTTP errors
+ErrorDocument 404 /error.php
+ErrorDocument 403 /error.php
+
+# Redirect non-existent requests to error.php
+# This check ensures that if the file or folder doesn't exist, 
+# the user is sent to the error page instead of the homepage.
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ error.php [QSA,L]

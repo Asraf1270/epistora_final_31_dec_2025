@@ -1,0 +1,85 @@
+{
+    "user_id": "U-9eede714-1766852309",
+    "role": "admin",
+    "created_at": "2025-12-27 16:18:29",
+    "profile": {
+        "name": "Md. Asraful Islam",
+        "email": "asraf_ad@gmail.com"
+    },
+    "settings": {
+        "bg_color": "#ffffff",
+        "font_style": "sans-serif",
+        "font_size": "16px"
+    },
+    "history": [
+        "AAD49A-202512-U-9eede714-1766852309",
+        "5325F9-202512-U-9eede714-1766852309",
+        "D06803-202512-U-9eede714-1766852309",
+        "68280E-202512-U-9eede714-1766852309",
+        "965370-202512-U-9eede714-1766852309",
+        "93DC9A-202512-U-9eede714-1766852309",
+        "27CB9D-202512-U-9eede714-1766852309",
+        "CCD070-202512-U-9eede714-1766852309",
+        "24A344-202512-U-9eede714-1766852309",
+        "DB64E9-202512-U-9eede714-1766852309",
+        "3C5E82-202512-U-9eede714-1766852309",
+        "D5F38B-202512-U-9eede714-1766852309",
+        "C29C9D-202512-U-9eede714-1766852309",
+        "2C90F5-202512-U-9eede714-1766852309",
+        "9D3948-202512-U-9eede714-1766852309",
+        "A2C986-202512-U-9eede714-1766852309",
+        "66CC7D-202512-U-9eede714-1766852309",
+        "75B4B7-202512-U-1600103b-1766852245",
+        "D2BC61-202512-U-1600103b-1766852245",
+        "B07DEC-202512-U-1600103b-1766852245",
+        "1E5478-202601-U-9eede714-1766852309"
+    ],
+    "following": [],
+    "notifications": [
+        {
+            "id": "ntf_6953a4e9ed8d7",
+            "type": "comment",
+            "from_name": "Md. Asraful Islam",
+            "post_id": "9D3948-202512-U-9eede714-1766852309",
+            "is_read": false,
+            "timestamp": 1767089385,
+            "date_human": "Dec 30, 10:09"
+        },
+        {
+            "id": "ntf_6953a4b643ce6",
+            "type": "comment",
+            "from_name": "Md. Asraful Islam",
+            "post_id": "9D3948-202512-U-9eede714-1766852309",
+            "is_read": false,
+            "timestamp": 1767089334,
+            "date_human": "Dec 30, 10:08"
+        },
+        {
+            "id": "ntf_6953a4ab05149",
+            "type": "comment",
+            "from_name": "Md. Asraful Islam",
+            "post_id": "9D3948-202512-U-9eede714-1766852309",
+            "is_read": false,
+            "timestamp": 1767089323,
+            "date_human": "Dec 30, 10:08"
+        },
+        {
+            "id": "ntf_6953a0ee50a48",
+            "type": "comment",
+            "from_name": "Md. Asraful Islam",
+            "post_id": "A2C986-202512-U-9eede714-1766852309",
+            "is_read": false,
+            "timestamp": 1767088366,
+            "date_human": "Dec 30, 09:52"
+        },
+        {
+            "id": "ntf_6953a0e2c9647",
+            "type": "comment",
+            "from_name": "Md. Asraful Islam",
+            "post_id": "A2C986-202512-U-9eede714-1766852309",
+            "is_read": false,
+            "timestamp": 1767088354,
+            "date_human": "Dec 30, 09:52"
+        }
+    ]
+}

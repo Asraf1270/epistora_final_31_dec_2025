@@ -1,0 +1,307 @@
+/* -------------------------------
+   General Reset & Base Styles
+---------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    font-size: 16px;
+    padding: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: #007BFF;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+/* -------------------------------
+   Article / Main Post
+---------------------------------*/
+.main-article {
+    max-width: 800px;
+    margin: 2rem auto;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+    transition: box-shadow 0.3s ease;
+}
+
+.main-article:hover {
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.main-article header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #111;
+}
+
+/* -------------------------------
+   Author Info Card
+---------------------------------*/
+.author-info-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f4f8ff;
+    padding: 0.8rem 1rem;
+    border-radius: 12px;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.author-info-card .author-name {
+    font-size: 0.95rem;
+    color: #333;
+}
+
+.author-info-card button {
+    padding: 0.3rem 0.7rem;
+    border: none;
+    border-radius: 6px;
+    background-color: #007BFF;
+    color: #fff;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: background-color 0.3s ease;
+}
+
+.author-info-card button:hover {
+    background-color: #0056b3;
+}
+
+/* -------------------------------
+   Post Stats Card
+---------------------------------*/
+.post-stats-card {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+.post-stats-card span {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+/* -------------------------------
+   Post Body
+---------------------------------*/
+.body-text {
+    margin: 1.5rem 0;
+    font-size: 1rem;
+    color: #444;
+}
+
+.body-text p {
+    margin-bottom: 1rem;
+}
+
+/* -------------------------------
+   Reactions
+---------------------------------*/
+.reactions {
+    display: flex;
+    gap: 0.75rem;
+    margin: 1rem 0;
+    flex-wrap: wrap;
+}
+
+.react-btn {
+    padding: 0.5rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    cursor: pointer;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.react-btn:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-2px);
+}
+
+.react-btn span {
+    font-weight: 600;
+}
+
+.react-btn.active {
+    animation: pop 0.3s ease forwards;
+}
+
+@keyframes pop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+    100% { transform: scale(1); }
+}
+
+/* -------------------------------
+   Comments Section
+---------------------------------*/
+.comment-section {
+    margin-top: 2rem;
+}
+
+.comment-section h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: #222;
+}
+
+.comment-form textarea {
+    width: 100%;
+    min-height: 80px;
+    padding: 0.7rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    resize: vertical;
+    font-family: inherit;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    transition: border-color 0.3s ease;
+}
+
+.comment-form textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+.comment-form button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #007BFF;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.comment-form button:hover {
+    background-color: #0056b3;
+}
+
+.comment-list {
+    margin-top: 1rem;
+}
+
+.comment {
+    padding: 1rem;
+    background-color: #fafafa;
+    border-radius: 8px;
+    margin-bottom: 0.75rem;
+    transition: background-color 0.3s ease;
+}
+
+.comment:hover {
+    background-color: #f0f0f0;
+}
+
+.comment strong {
+    color: #007BFF;
+}
+
+.comment small {
+    color: #888;
+    font-size: 0.8rem;
+}
+
+.comment p {
+    margin: 0.5rem 0 0;
+}
+
+.comment button {
+    margin-top: 0.3rem;
+    padding: 0.3rem 0.6rem;
+    font-size: 0.8rem;
+    border-radius: 6px;
+    border: none;
+    background-color: #e0e0e0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.comment button:hover {
+    background-color: #ccc;
+}
+
+.replies {
+    margin-left: 2rem;
+    margin-top: 0.5rem;
+}
+
+/* Smooth reply form animation */
+.reply-form {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease, opacity 0.35s ease;
+    opacity: 0;
+    margin-top: 0.5rem;
+}
+
+.reply-form.show {
+    max-height: 200px;
+    opacity: 1;
+}
+
+/* -------------------------------
+   Utility / Misc
+---------------------------------*/
+hr {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 2rem 0;
+}
+
+button:focus, input:focus, textarea:focus {
+    outline: none;
+}
+
+/* -------------------------------
+   Responsive
+---------------------------------*/
+@media (max-width: 768px) {
+    .main-article {
+        padding: 1.5rem;
+    }
+
+    .author-info-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .post-stats-card {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .reactions {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .comment-list {
+        margin-left: 0;
+    }
+}

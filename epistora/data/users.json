@@ -1,0 +1,26 @@
+{
+    "asraf@gmail.com": {
+        "id": "U-a7e0fd1f-1766728877",
+        "name": "Md. Asraful Islam",
+        "password": "$2y$10$GEc90vQETQjhpOJApjO2P.TI\/AHzW8gXHrJsjMiYhMovn7a5Ez\/ty",
+        "role": "user"
+    },
+    "asraf_w@gmail.com": {
+        "id": "U-b4d034d0-1766729322",
+        "name": "Md. Asraful Islam",
+        "password": "$2y$10$f4rPXICQ3p\/PT42sC6j.pev2Y7781CdMbrpFE2jecbFOOsoBSsVJS",
+        "role": "writer"
+    },
+    "asraf_vw@gmail.com": {
+        "id": "U-c650de5d-1766729335",
+        "name": "Md. Asraful Islam",
+        "password": "$2y$10$ykB0EGkDK2KGHeSZtltBkeaH8e9PFo8Ss8q2xYaTIj0oDXGxEM1fa",
+        "role": "v_writer"
+    },
+    "asraf_ad@gmail.com": {
+        "id": "U-dbc96da3-1766729347",
+        "name": "Md. Asraful Islam",
+        "password": "$2y$10$Oz5.XzXGJknehJ521mmvMe.K8s0I.LO.V\/5q98c62zIMJIDM9vMfO",
+        "role": "admin"
+    }
+}

@@ -1,0 +1,41 @@
+{
+    "post_id": "191711-202512-U-b4d034d0-1766729322",
+    "title": "this is the first",
+    "content": "Build the Content Submission system for Epistora.\r\n\r\nCreate \/post\/create\/index.php.\r\n\r\nLogic: When a post is submitted, generate a post_id as [UniqueString][Year][Month][WriterID].\r\n\r\nPermissions: If the user is a v_writer or admin, set status to 'published'. Immediately add the metadata (title, preview, author) to \/data\/posts.json and create the full content file in \/data\/post_content\/[post_id].json.\r\n\r\nIf the user is a standard writer, set status to 'pending' and only create the file in \/data\/post_content\/.\r\n\r\nCreate \/admin\/pending\/index.php for admins to review and move 'pending' metadata into the global posts.json index.",
+    "tags": [
+        "test1",
+        "test2"
+    ],
+    "author": "Md. Asraful Islam",
+    "author_id": "U-b4d034d0-1766729322",
+    "status": "published",
+    "created_at": "2025-12-26 06:31:34",
+    "timestamp": 1766730694,
+    "stats": {
+        "unique_views": 1,
+        "total_views": 14
+    },
+    "reactions": {
+        "love": 4,
+        "insight": 1
+    },
+    "comments": [
+        {
+            "comment_id": "c_694e463e74ed5",
+            "user_id": "U-dbc96da3-1766729347",
+            "user_name": "Md. Asraful Islam",
+            "text": "hi",
+            "date": "2025-12-26 08:24",
+            "replies": [
+                {
+                    "comment_id": "c_694e4655c3539",
+                    "user_id": "U-dbc96da3-1766729347",
+                    "user_name": "Md. Asraful Islam",
+                    "text": "ki bolos",
+                    "date": "2025-12-26 08:24",
+                    "replies": []
+                }
+            ]
+        }
+    ]
+}
